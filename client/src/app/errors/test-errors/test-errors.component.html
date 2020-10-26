@@ -4,4 +4,10 @@
   <button class="btn btn-outline-primary mr-3" (click) = "get401()">Test 401</button>
   <button class="btn btn-outline-primary mr-3" (click) = "get404()">Test 404</button>
   <button class="btn btn-outline-primary mr-3" (click) = "getValidationError()">Validation Error</button>
+
+  <div class="row mt-4" *ngIf="validationErrors.length>0">
+    <ul class="alert-danger">
+      <li *ngFor="let error of validationErrors">{{error}}</li>
+    </ul>
+  </div>
 </ng-container>
